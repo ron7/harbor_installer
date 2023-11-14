@@ -72,5 +72,5 @@ sed -e '/\/your\/certificate\/path$/ s/^#*/#/' -i harbor.yml
 sed -e '/\/your\/private\/key\/path$/ s/^#*/#/' -i harbor.yml
 
 mkdir -p /var/log/harbor
-./install.sh --with-chartmuseum
+./install.sh --with-trivy
 echo -e "Harbor Installation Complete \n\nPlease log out and log in or run the command 'newgrp docker' to use Docker without sudo\n\nLogin to your harbor instance:\n docker login -u admin -p Harbor12345 $IPorFQDN\n\n:::: ufw firewall was NOT disabled!\n"
